@@ -7,30 +7,30 @@ import utiles.Menu;
 import utiles.Teclado;
 
 /**
- * Crea una estructura din·mica de personas.
+ * Crea una estructura din√°mica de personas.
  * 
  * Una persona consta de:
  * <ol>
  * 
- * <li>Nombre (regex con mÌnimo de tres caracteres v·lidos seguidos)
+ * <li>Nombre (regex con m√≠nimo de tres caracteres v√°lidos seguidos)
  * 
- * <li>Apellido primero (regex con mÌnimo de tres caracteres v·lidos seguidos)
+ * <li>Apellido primero (regex con m√≠nimo de tres caracteres v√°lidos seguidos)
  * 
- * <li>Apellido segundo (regex con mÌnimo de tres caracteres v·lidos seguidos)
+ * <li>Apellido segundo (regex con m√≠nimo de tres caracteres v√°lidos seguidos)
  * 
- * <li>Fecha de nacimiento (regex con formato dd/mm/aaaa y (opcional) es v·lida
- * (aÒo bisiesto)
+ * <li>Fecha de nacimiento (regex con formato dd/mm/aaaa y (opcional) es v√°lida
+ * (a√±o bisiesto)
  * 
- * <li>CÛdigo postal (regex que admita pplll Û pp.lll)
+ * <li>C√≥digo postal (regex que admita pplll √≥ pp.lll)
  * 
  * <li>Edad (opcional)
  * 
- * <li>Identificador unÌvoco, generado mediante un campo static)
+ * <li>Identificador un√≠voco, generado mediante un campo static)
  * </ol>
- * Con la estructura podr·s realizar las siguientes operaciones:
+ * Con la estructura podr√°s realizar las siguientes operaciones:
  * <ol>
  * 
- * <li>AÒadir una nueva persona
+ * <li>A√±adir una nueva persona
  * 
  * <li>Eliminarla (utiliza contains)
  * 
@@ -39,30 +39,30 @@ import utiles.Teclado;
  * <li>Mostrar la estructura al completo(utiliza toString)
  * </ol>
  * 
- * @author MarÌaLourdes
+ * @author Mar√≠aLourdes
  * 
  */
 public class TestListaDePersonas {
-	static Menu menu = new Menu("Lista de Personas", new String[] { "AÒadir",
+	static Menu menu = new Menu("Lista de Personas", new String[] { "A√±adir",
 			"Eliminar", "De una provincia", "Mostrar lista", "Salir" });
 	static ListaPersonas listaPersonas = new ListaPersonas();
 
 	public static void main(String[] args) {
 		/////////////////////////////////////////////////////////
-		listaPersonas.annadir("Ana", "GÛmez", "De la Serna", "31/01/2000",
+		listaPersonas.annadir("Ana", "G√≥mez", "De la Serna", "31/01/2000",
 				"51002");
-		listaPersonas.annadir("Pepe", "TÛmez", "De la Serna", "31/01/2000",
+		listaPersonas.annadir("Pepe", "T√≥mez", "De la Serna", "31/01/2000",
 				"51003");
-		listaPersonas.annadir("Anacleta", "Francia", "De los RÌos", "31/01/2000",
+		listaPersonas.annadir("Anacleta", "Francia", "De los R√≠os", "31/01/2000",
 				"14002");
-		listaPersonas.annadir("Rigoberto", "Fern·ndez", "Del RÌo", "31/01/2000",
+		listaPersonas.annadir("Rigoberto", "Fern√°ndez", "Del R√≠o", "31/01/2000",
 				"14003");
 		
 		System.out.println("Inicialmente, la lista contiene: \n"+listaPersonas);
 		////////////////////////////////////////////////////////77
 		do {
 			switch (menu.gestionar()) {
-			case 1:// "AÒadir
+			case 1:// "A√±adir
 				annadirPersona();
 				break;
 			case 2:// Eliminar
@@ -74,6 +74,8 @@ public class TestListaDePersonas {
 			case 4:// Mostrar lista
 				System.out.println(listaPersonas);
 				break;
+			case 5:
+				System.out.println("Esto es lo nuevo uqe agregmaos para probar");
 			default:// Salir
 				System.out.println("Aaaaaaaaaaaaaaaaaaaaadios");
 				return;
@@ -91,7 +93,7 @@ public class TestListaDePersonas {
 		if (listaDeProvincia.size() == 0)
 			System.out.println("No existen personas de esa provincia.");
 		else
-			System.out.println("N˙mero de personas en la provincia "
+			System.out.println("N√∫mero de personas en la provincia "
 					+ provincia + ": " + listaDeProvincia.size() + "\n"
 					+ listaDeProvincia);
 	}
@@ -115,10 +117,10 @@ public class TestListaDePersonas {
 				Teclado.leerCadena("Introduce primer apellido"),
 				Teclado.leerCadena("Introduce segundo apellido"),
 				Teclado.leerCadena("Introduce fecha de nacimiento"),
-				Teclado.leerCadena("Introduce cÛdigo postal")))
-			System.out.println("Persona aÒadido con Èxito");
+				Teclado.leerCadena("Introduce c√≥digo postal")))
+			System.out.println("Persona a√±adido con √©xito");
 		else
-			System.out.println("No se ha podido aÒadir");
+			System.out.println("No se ha podido a√±adir");
 	}
 
 }
